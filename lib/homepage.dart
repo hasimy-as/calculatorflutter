@@ -54,44 +54,45 @@ class HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Flutter Calculator'),
+        title: new Text('Yurods Calculator'),
       ),
       body: new Container(
         padding: const EdgeInsets.all(40.0),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text(
-              "Output : $sum",
-              style: new TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red),
-            ),
             new TextField(
               keyboardType: TextInputType.number,
-              decoration: new InputDecoration(hintText: "Enter a number"),
               controller: t1,
             ),
             new TextField(
               keyboardType: TextInputType.number,
-              decoration: new InputDecoration(hintText: "Enter a number"),
               controller: t2,
             ),
             new Padding(
-              padding: const EdgeInsets.only(top: 20.0),
+              padding: const EdgeInsets.only(bottom: 50.0),
+            ),
+            new Text(
+              "$sum",
+              style: new TextStyle(
+                  fontSize: 21.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
+            ),
+            new Padding(
+              padding: const EdgeInsets.only(top: 50.0),
             ),
             new Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 new MaterialButton(
                   child: new Text("+"),
-                  color: Colors.cyanAccent,
+                  color: Colors.white70,
                   onPressed: addition,
                 ),
                 new MaterialButton(
                   child: new Text("-"),
-                  color: Colors.cyanAccent,
+                  color: Colors.white70,
                   onPressed: subtract,
                 ),
               ],
@@ -104,25 +105,24 @@ class HomepageState extends State<Homepage> {
               children: <Widget>[
                 new MaterialButton(
                   child: new Text("x"),
-                  color: Colors.cyanAccent,
+                  color: Colors.white70,
                   onPressed: multiply,
                 ),
                 new MaterialButton(
                   child: new Text(":"),
-                  color: Colors.cyanAccent,
+                  color: Colors.white70,
                   onPressed: divide,
                 ),
               ],
             ),
             new Padding(
-              padding: const EdgeInsets.only(top: 20.0),
+              padding: const EdgeInsets.only(bottom: 60.0),
             ),
             new Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 new MaterialButton(
                   child: new Text("Clear"),
-                  color: Colors.cyanAccent,
                   onPressed: clearing,
                 ),
               ],

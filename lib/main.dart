@@ -6,9 +6,11 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Color colorData = Colors.blue[10];
+
     return new MaterialApp(
-      title: "Flutter Calculator",
-      theme: new ThemeData(primarySwatch: Colors.red),
+      title: "Yurod Calculator",
+      theme: new ThemeData(primarySwatch: colorData),
       home: new Homepage(),
     );
   }
