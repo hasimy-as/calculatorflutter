@@ -53,6 +53,7 @@ class HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: new AppBar(
         title: new Text('Yurods Calculator'),
       ),
